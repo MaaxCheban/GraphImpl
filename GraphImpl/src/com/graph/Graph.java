@@ -1,4 +1,4 @@
-package com.Graph;
+package com.graph;
 
 
 import java.util.*;
@@ -30,9 +30,17 @@ public class Graph<V> {
         vertexes.add(vertex);
     }
 
+    public void removeVertex(Vertex<V> vertex) {
+        vertexes.remove(vertex);
+    }
+
     public void addEdge(Vertex<V> source, Vertex<V> dest, int weight){
         Edge<V> edge = new Edge<>(source, dest, weight);
         edges.add(edge);
+    }
+
+    public void removeEdge(Edge<V> edge){
+        edges.remove(edge);
     }
 
     public List<Vertex<V>> findShortestWay(Algorithm algorithm){

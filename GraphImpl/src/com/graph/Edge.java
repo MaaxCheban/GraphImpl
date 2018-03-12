@@ -1,4 +1,4 @@
-package com.Graph;
+package com.graph;
 
 /**
  * Created by MAX on 12.03.2018.

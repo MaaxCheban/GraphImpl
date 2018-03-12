@@ -1,8 +1,7 @@
 package com;
 
-import com.Graph.*;
+import com.graph.*;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
