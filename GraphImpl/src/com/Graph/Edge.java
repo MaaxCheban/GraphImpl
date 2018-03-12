@@ -6,7 +6,7 @@ package com.Graph;
 public class Edge<V> {
     private Vertex<V> source;
     private Vertex<V> destination;
-    int weight;
+    private int weight;
 
     public Edge(Vertex<V> source, Vertex<V> destination, int weight) {
         super();

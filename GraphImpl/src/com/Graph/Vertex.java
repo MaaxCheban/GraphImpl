@@ -7,7 +7,6 @@ public class Vertex<V> {
     private V name;
 
     public Vertex(V name) {
-        super();
         this.name = name;
     }
 
@@ -33,11 +32,14 @@ public class Vertex<V> {
         if (getClass() != obj.getClass())
             return false;
         Vertex other = (Vertex) obj;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
+        if(!name.equals(other.getName())) return false;
+
+
         return true;
+    }
+
+    @Override
+    public String toString(){
+        return name.toString();
     }
 }

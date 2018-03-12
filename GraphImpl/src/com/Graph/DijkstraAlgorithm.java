@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by MAX on 12.03.2018.
  */
-public class DijkstraAlgorithm<V> {
+public class DijkstraAlgorithm<V> implements Algorithm<V>{
 
     private final List<Vertex<V>> nodes;
     private final List<Edge<V>> edges;
@@ -101,8 +101,8 @@ public class DijkstraAlgorithm<V> {
      * This method returns the path from the source to the selected target and
      * NULL if no path exists
      */
-    public LinkedList<Vertex> getPath(Vertex target) {
-        LinkedList<Vertex> path = new LinkedList<Vertex>();
+    public List<Vertex<V>> getPath(Vertex target) {
+        LinkedList<Vertex<V>> path = new LinkedList<Vertex<V>>();
         Vertex step = target;
         // check if a path exists
         if (predecessors.get(step) == null) {
