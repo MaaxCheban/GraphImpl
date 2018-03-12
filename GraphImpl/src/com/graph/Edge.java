@@ -27,6 +27,10 @@ public class Edge<V> {
         return weight;
     }
 
+    public boolean contain(Vertex<V> vertex){
+        return vertex.equals(source) || vertex.equals(destination);
+    }
+
     @Override
     public String toString() {
         return "Edge [source=" + source + ", destination=" + destination

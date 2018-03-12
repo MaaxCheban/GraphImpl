@@ -31,6 +31,11 @@ public class Graph<V> {
     }
 
     public void removeVertex(Vertex<V> vertex) {
+        for (Edge<V> edge: edges) {
+            if (edge.contain(vertex)){
+                edges.remove(edge);
+            }
+        }
         vertexes.remove(vertex);
     }
 
