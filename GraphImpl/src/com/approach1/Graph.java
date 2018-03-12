@@ -32,11 +32,10 @@ public class Graph<V> {
 
     public void deleteNode(V vertex, Vertex<V> node) {
         List<Vertex<V>> vertices = adjacencyList.get(vertex);
-        if (vertices == null || vertices.isEmpty()) {
-            vertices = new ArrayList<Vertex<V>>();
-            vertices.add(node);
+        if (vertices != null || !vertices.isEmpty()) {
+            vertices.remove(node);
         } else {
-            vertices.add(node);
+            System.out.println("Something wrong");
         }
         adjacencyList.put(vertex, vertices);
     }

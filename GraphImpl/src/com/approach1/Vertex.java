@@ -40,4 +40,8 @@ public class Vertex<V> {
             return false;
         return true;
     }
+
+    public String toString(){
+        return name.toString();
+    }
 }
