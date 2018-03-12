@@ -11,6 +11,14 @@ public class Graph<V> {
     private List<Edge<V>> edges;
     private Scanner scanner;
 
+    public int getVerticesCount() {
+        return vertexes.size();
+    }
+
+    public int getEdgeCount() {
+        return edges.size();
+    }
+
     public Graph() {
         super();
         this.vertexes = new ArrayList<>();
