@@ -25,11 +25,10 @@ public class TestMain {
         graph.addNewNode("Bangalore", new Vertex<>("HongKong"));
         assertTrue(graph.hasRelationship("Bangalore", "HongKong"));
 
-        graph.addNewNode("Bangalore", new Vertex<>("LA"));
-        assertTrue(graph.hasRelationship("Bangalore", "LA"));
+        graph.deleteNode("Bangalore", new Vertex<>("HongKong"));
+        assertFalse(graph.hasRelationship("Bangalore", "HongKong"));
 
-        graph.addNewNode("LA", new Vertex<>("SFO"));
-        graph.addNewNode("HongKong", new Vertex<>("LA"));
+;
     }
 
 

@@ -7,6 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+
         Graph<String> graph = new Graph<>();
 
         graph.addNewNode("Bangalore", new Vertex<>("SFO"));

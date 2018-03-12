@@ -22,7 +22,7 @@ public class Graph<V> {
     public void addNewNode(V vertex, Vertex<V> node) {
         List<Vertex<V>> vertices = adjacencyList.get(vertex);
         if (vertices == null || vertices.isEmpty()) {
-            vertices = new ArrayList<Vertex<V>>();
+            vertices = new ArrayList<>();
             vertices.add(node);
         } else {
             vertices.add(node);
@@ -41,12 +41,12 @@ public class Graph<V> {
     }
 
     public boolean hasRelationship(V v1, V v2) {
-        if (v1 == null && v2 == null)
+        if (v1 == null && v2 == null) {
             return true;
-        if (v1 != null && v2 == null)
+        }
+        if (v1 != null && v2 == null) {
             return true;
-        if (v1 == null && v2 != null)
-            return false;
+        }
 
         List<Vertex<V>> vertices = null;
 
@@ -62,8 +62,13 @@ public class Graph<V> {
         return false;
     }
 
+    public boolean isEmpty(){
+        return adjacencyList.isEmpty();
+
+    }
+
     public void print() {
-        System.out.println("approach1 is --->");
+        System.out.println("Graph is --->");
         for (V v : adjacencyList.keySet()) {
             System.out.println(v + " --- " + adjacencyList.get(v));
         }
