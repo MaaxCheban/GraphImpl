@@ -3,11 +3,11 @@ package com.approach1;
 /**
  * Created by MAX on 12.03.2018.
  */
-public class Node<V> {
+public class Vertex<V> {
     V name; // Vertex name
     int weight;
 
-    public Node(V name, int weight) {
+    public Vertex(V name, int weight) {
         super();
         this.name = name;
         this.weight = weight;

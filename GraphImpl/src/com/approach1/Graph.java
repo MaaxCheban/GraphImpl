@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class Graph<V> {
     // Vertex i.e. V gets mapped to list of all connecting Nodes.
-    Map<V, List<Node<V>>> adjacencyList;
+    Map<V, List<Vertex<V>>> adjacencyList;
     int verticesCount;
     int edgeCount;
 
@@ -26,15 +26,15 @@ public class Graph<V> {
      * @param vertex
      * @param node
      */
-    public void addNewNode(V vertex, Node<V> node) {
-        List<Node<V>> nodes = adjacencyList.get(vertex);
-        if (nodes == null || nodes.isEmpty()) {
-            nodes = new ArrayList<Node<V>>();
-            nodes.add(node);
+    public void addNewNode(V vertex, Vertex<V> node) {
+        List<Vertex<V>> vertices = adjacencyList.get(vertex);
+        if (vertices == null || vertices.isEmpty()) {
+            vertices = new ArrayList<Vertex<V>>();
+            vertices.add(node);
         } else {
-            nodes.add(node);
+            vertices.add(node);
         }
-        adjacencyList.put(vertex, nodes);
+        adjacencyList.put(vertex, vertices);
     }
 
     /**
@@ -53,12 +53,12 @@ public class Graph<V> {
         if (v1 == null && v2 != null)
             return false;
 
-        List<Node<V>> nodes = null;
+        List<Vertex<V>> vertices = null;
 
         if (adjacencyList.containsKey(v1)) {
-            nodes = adjacencyList.get(v1);
-            if (nodes != null || !nodes.isEmpty()) {
-                for (Node<V> v : nodes) {
+            vertices = adjacencyList.get(v1);
+            if (vertices != null || !vertices.isEmpty()) {
+                for (Vertex<V> v : vertices) {
                     if (v.getName().equals(v2))
                         return true;
                 }
